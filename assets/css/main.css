@@ -1,0 +1,339 @@
+* {
+	box-sizing: border-box;
+	cursor: default;
+}
+
+a {
+	color: #000000;
+	text-decoration: none;
+}
+
+html {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: 'Nanum Myeongjo', serif;
+	padding: 2.5vw;
+	margin: 0;
+}
+
+#name {
+	font-size: 300%;
+}
+
+#blurb {
+	font-style: italic;
+	padding: 0 0 0 2.5vw;
+	line-height: 300%;
+}
+
+#portrait {
+	width: 33.75vw; 
+	height: 45vw;
+	max-height: calc(100vh - 5vw);
+	object-fit: cover;
+	vertical-align: bottom;
+}
+
+#header {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: left;
+	align-items: baseline;
+	width: 60vw;
+}
+
+#maintext {
+	font-family: "Raleway", sans-serif;
+	padding: 5vw 2.5vw;
+	width: 57.5vw;
+	line-height: 200%;
+}
+
+.sidebar {
+	width: 33.75vw;
+	position: fixed;
+	right: 3.5vw;
+	top: 2.5vw;
+}
+
+.menu {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	align-items: center;
+	width: 33.75vw;
+	line-height: 200%;
+}
+
+.menu-item {
+	color: #000000;
+}
+
+.menu-item a {
+	cursor: pointer;
+}
+
+.menu-item a:hover {
+	color: #8C9A90;
+}
+
+#active a {
+	cursor: default;
+	color: #000000;
+	text-decoration: underline;
+}
+
+#active a:hover {
+	color: #000000;
+	text-decoration: underline;
+}
+
+.cv-section {
+	padding: 0 0 2em 0;
+}
+
+.cv-header {
+	color: #50686A;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 0 0 1em 0;
+}
+
+.cv-date {
+	display: inline-block;
+	min-width: 10vw;
+	vertical-align: top;
+}
+
+.cv-item {
+	display: inline-block;
+	width: 42.5vw;
+	padding: 0 0 1em 0;
+}
+
+.cv-item a {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.cv-item a:hover {
+    text-decoration: none;
+}
+
+.projects {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.projects div {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	background: #eeeeee;
+	position: relative;
+}
+
+#loading {
+	width: 100%;
+	height: 100%;
+	background-color: #EEEEEE;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 2vw;
+	color: #AAAAAA;
+	width: 30vw;
+	height: 30vw;
+	border-radius: 15vw;
+	position: absolute;
+}
+
+.projects img {
+	object-fit: cover;
+	vertical-align: bottom;
+	cursor: pointer;
+}
+
+#Blog {
+	justify-content: center;
+	align-items: center;
+}
+
+#Blog span {
+	text-align: center;
+}
+
+#BlogName, #BlogPosts, #BlogSamplePost, #BlogPostStats {
+	line-height: 100%;
+	padding: 0 0 1vw 0;
+	font-size: 1vw;
+}
+
+#BlogName {
+	font-size: 1.25vw;
+}
+
+#blogsample {
+	height: 10vw;
+	width: 10vw;
+	object-fit: cover;
+	border-radius: 0;
+}
+
+.projects div:nth-child(odd) {
+	top: -2.5vw;
+}
+
+.projects div:nth-child(even) {
+	top: 2.5vw;
+}
+
+.projects div:nth-child(4n + 1), .projects div:nth-child(4n) {
+	width: 20vw;
+	height: 20vw;
+	border-radius: 10vw;
+}
+
+.projects div:nth-child(4n + 2), .projects div:nth-child(4n + 3) {
+	width: 30vw;
+	height: 30vw;
+	border-radius: 15vw;
+}
+
+.projects div:nth-child(4n + 1) img, .projects div:nth-child(4n) img {
+	width: 20vw;
+	height: 20vw;
+	border-radius: 10vw;
+}
+
+.projects div:nth-child(4n + 2) img, .projects div:nth-child(4n + 3) img {
+	width: 30vw;
+	height: 30vw;
+	border-radius: 15vw;
+}
+
+.projects div .tooltiptext {
+	visibility: hidden;
+	background-color: #000000;
+	color: #ffffff;
+	text-align: center;
+	padding: .5vw .25vw;
+	border-radius: 6px;
+	position: absolute;
+	width: 20vw;
+	top: calc(100% + 5px);
+	left: 50%;
+	margin-left: -10vw;
+	z-index: 2;
+	font-size: 1vw;
+	line-height: 150%;
+}
+
+.projects div .tooltiptext::after {
+	content: " ";
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent transparent black transparent;
+}
+
+.projects div:hover .tooltiptext {
+	visibility: visible;
+}
+
+@media only screen and (max-width: 786px) {
+	#portrait {
+		width: 95vw; 
+		height: 33vh;
+	}
+
+	#header {
+		width: 95vw;
+	}
+
+	#maintext {
+		width: 90vw;
+	}
+
+	.sidebar {
+		width: 95vw;
+		position: relative;
+		right: 0;
+		top: 0;
+	}
+
+	.menu {
+		width: 95vw;
+	}
+
+	.cv-date {
+		width: 90vw;
+	}
+
+	.cv-item {
+		width: 90vw;
+	}
+
+	.projects div:nth-child(n) {
+		top: 0;
+		width: 80vw;
+		height: 80vw;
+		border-radius: 45vw;
+		margin: 5vw 0 5vw 0;
+	}
+
+	.projects div:nth-child(n) img {
+		width: 80vw;
+		height: 80vw;
+		border-radius: 45vw;
+	}
+
+	.projects div .tooltiptext {
+		width: 90vw;
+		margin-left: -45vw;
+	}
+	#loading {
+		font-size: 8vw;
+		color: #AAAAAA;
+		width: 80vw;
+		height: 80vw;
+		border-radius: 45vw;
+	}
+	.projects div .tooltiptext {
+		padding: 1vw .5vw;
+		border-radius: 6px;
+		position: absolute;
+		width: 60vw;
+		top: calc(100% + 5px);
+		left: 50%;
+		margin-left: -30vw;
+		z-index: 2;
+		font-size: 2vw;
+		line-height: 150%;
+	}
+	#BlogName, #BlogPosts, #BlogSamplePost, #BlogPostStats {
+		line-height: 100%;
+		padding: 0 0 3vw 0;
+		font-size: 3vw;
+	}
+	#BlogName {
+		font-size: 3.75vw;
+	}
+
+	#blogsample {
+		height: 30vw;
+		width: 30vw;
+	}
+}
